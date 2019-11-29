@@ -1,0 +1,44 @@
+<!--
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-08-12 13:49:53
+ * @LastEditTime: 2019-08-12 14:48:04
+ * @LastEditors: Please set LastEditors
+ -->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script src="jquery-3.4.1.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <button>快速</button>
+        <button>快速</button>
+        <button>快速</button>
+        <button>快速</button>
+        <button>快速</button>
+        <button>快速</button>
+        <script>
+            $(function(){
+                //隐式迭代，给所有的按钮都绑定了点击事件
+                $("button").click(function(){
+                    //$(this).css("background", "pink");
+                    //$(this).siblings("button").css("background", "");
+                    //链式编程
+                    $(this).css("background", "red").siblings().css("background", "");
+                });
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!--
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-08-14 19:54:34
+ * @LastEditTime: 2019-08-14 20:18:30
+ * @LastEditors: Please set LastEditors
+ -->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <script src="jquery-3.4.1.js"></script>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <script>
+            var arr=["red", "green", "blue"];
+            var sum=0;
+            $(function(){
+                $("div").each(function(i,domEle){
+                    //回调函数第一个参数一定是索引号 可以自己指定索引号名称
+                    console.log(i);
+                    console.log(domEle);
+                    $(domEle).css("color", arr[i]);
+                    sum += parseInt($(domEle).text());
+                })
+                console.log(sum);
+                
+
+                $.each($("div"),function(i,ele){
+                    console.log(i);
+                    
+                })
+                $.each(arr,function(i, ele){
+                    console.log(i);
+                    console.log(ele);
+                    
+                    
+                })
+            })
+        </script>
+    </body>
+</html>

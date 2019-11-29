@@ -1,0 +1,60 @@
+<!--
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-08-12 15:17:26
+ * @LastEditTime: 2019-08-12 16:10:53
+ * @LastEditors: Please set LastEditors
+ -->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script src="jquery-3.4.1.js"></script>
+        <style>
+            div{
+                transition: all 0.5s;
+                width:200px;
+                height:300px;
+                background-color:red;
+            }
+            .current{
+                background-color: pink;
+                transform: rotate(360deg);
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div></div>
+        
+        <script>
+            $(function(){
+                // console.log($("div").css("width"));
+                // $("div").css({
+                //     width:200,
+                //     height:300,
+                //     backgroundColor:"red"//非数字必须加引号
+                // })
+            //添加类 删除类 切换类
+                // $("div").addClass("current");
+                // $("div").removeClass("current");
+                $("div").click(function (e) { 
+                    e.preventDefault();
+                    $(this).toggleClass("current");
+                    
+                });
+            })
+
+        </script>
+    </body>
+</html>

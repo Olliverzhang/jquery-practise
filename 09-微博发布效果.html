@@ -1,0 +1,52 @@
+<!--
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-08-15 15:33:52
+ * @LastEditTime: 2019-08-15 15:54:55
+ * @LastEditors: Please set LastEditors
+ -->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script src="jquery-3.4.1.js"></script>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="box" id="weibo">
+            <span>微博发布</span>
+            <textarea name="" class="txt" cols="30" rows="10"></textarea>
+            <button class="btn">发布</button>
+            <ul></ul>
+        </div>
+        <script>
+            $(function(){
+                //1、点击发布按钮，动态创建一个小li，放入文本框的内容和删除按钮，并且添加到ul中
+                $(".btn").on("click", function(){
+                    var li = $("<li></li>")
+                    li.html($(".txt").val() + "<a href='javascript:;'>删除</a>");
+                    $("ul").append(li);
+                    li.slideDown();
+                    $(".txt").val("");
+                })
+                //2、点击删除按钮，可以删除当前的微博留言
+                $("ul").on("click", "a", function(){
+                    $(this).parent().remove();//这里的this指代的是“a”
+                })
+            })
+        </script>
+    </body>
+</html>

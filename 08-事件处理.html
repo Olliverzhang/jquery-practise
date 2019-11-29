@@ -1,0 +1,90 @@
+<!--
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-08-15 14:11:05
+ * @LastEditTime: 2019-08-15 14:43:03
+ * @LastEditors: Please set LastEditors
+ -->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script src="jquery-3.4.1.js"></script>
+        <style>
+            div{
+                width:200px;
+                height: 300px;
+                background-color: pink;
+            }
+            .current{
+                background-color: purple;
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div></div>
+        <ul>
+            <li>事件1</li>
+            <li>事件2</li>
+            <li>事件3</li>
+            <li>事件4</li>
+        </ul>
+        <ol></ol>
+        
+        <script>
+
+            // $("div").click(function(){
+            //     $(this).css({
+            //         backgroundColor: "black"
+            //     })
+            // })
+            // $("div").mouseenter(function () {
+            //     $(this).css({
+            //         backgroundColor: "skyblue"
+            //     })
+            // })
+        //用on事件写
+            // $("div").on({
+            //     mouseenter:function(){
+            //         $(this).css({
+            //             backgroundColor: "skyblue"
+            //         })
+            //     },
+            //     click:function(){
+            //         $(this).css({
+            //         backgroundColor: "black"
+            //         })
+            //     },
+            //     mouseleave:function(){
+            //         $(this).css({
+            //             backgroundColor:"purple"
+            //         })
+            //     }
+            // })
+            //若事件处理程序是一样的
+            // $(function(){
+            //     $("div").on("mouseenter mouseleave", function(){
+            //         $(this).toggleClass("current");
+            //     })
+            // })
+            // （2）on可以实现事件委托（委派）
+            $(function () {
+                $("ul").on("click", "li", function(){
+                    alert("11");
+                })
+                
+            })
+        </script>
+    </body>
+</html>
